@@ -29,6 +29,10 @@ t = months
 
 Go - Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 
+https://golang.org/
+
+https://play.golang.org/
+
 ## Contributing
 
 Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
