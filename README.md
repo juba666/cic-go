@@ -3,7 +3,7 @@
 ## Compound Interest Calculator
 Compound interest is one of the most powerful forces in investing. Simple interest simply means a set percentage of the principal for the period, and is rarely used in practice. On the other hand, compound interest is applied to both loans, investments and deposit accounts.
 
-### 1.Future Amount Calculator
+### 1. Future Amount Calculator
 ```
 f = p × ((r/100)+1) ^ n
 
@@ -27,7 +27,7 @@ r = 10% (10/100 for decimal)
 n = 6
 s = months
 ```
-### 2.Principal Amount Calculator
+### 2. Principal Amount Calculator
 ```
 p = f / ((r/100)+1) ^ n
 
@@ -51,7 +51,7 @@ r = 10% (10/100 for decimal)
 n = 5
 s = years
 ```
-### 3.Interest Rate Calculator
+### 3. Interest Rate Calculator
 ```
 r = (f/p) ^ 1/n - 1
 
@@ -75,7 +75,7 @@ r = 14.87% (*100 for decimal)
 n = 5
 s = years
 ```
-### 4.Number of Periods Calculator
+### 4. Number of Periods Calculator
 ```
 ??????????????????????????
 
