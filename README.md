@@ -39,7 +39,7 @@ s = Type of Period (days-weeks-months-years)
 ```
 #### An example
 ```
-How much do you need to invest, to get £2000 in 5 years at 10% interest rate?:
+What principal amount do you need to invest, to get £2000 in 5 years at 10% interest rate?:
 
 1241.84 = 2000 / (0.1+1) ^ 5 years
 
