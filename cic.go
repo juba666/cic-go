@@ -19,11 +19,14 @@ var CH float64
 fmt.Print("Enter a choice(1-4): ")
 fmt.Scanf("%f\n", &CH)
 if CH == FA {
-        fmt.Println("You have Future Amount Calculator")
+        fmt.Println("You have chosen Future Amount Calculator")
 		calcFA()
 } else if CH == PA {
-	fmt.Println("You have Principal Amount Calculator")
+	fmt.Println("You have chosen Principal Amount Calculator")
 		calcPA()
+} else if CH == IR {
+	fmt.Println("You have chosen Interest Rate Calculator")
+		calcIR()
 } else {
 	result := "END TEST"
         fmt.Println(result)
@@ -65,6 +68,23 @@ P := fmt.Sprintf("%.2f", fp)
 fmt.Println("Principal Amount:£",P)
 }
 func calcIR() {
+var f float64
+var s string
+var n float64
+var p float64
+fmt.Print("Enter a Principal Amount(£): ")
+fmt.Scanf("%f\n", &p)
+fmt.Print("Enter a Future Amount(£): ")
+fmt.Scanf("%f\n", &f)
+fmt.Print("Enter a Type of Period(days-weeks-months-years): ")
+fmt.Scanf("%s\n", &s)
+fmt.Print("Enter a Number of Periods("+s+"): ") 
+fmt.Scanf("%f\n", &n) 
+fp := f/p
+nd := 1/n
+r := (math.Pow(float64(fp), float64(nd))-1)*100
+R := fmt.Sprintf("%.2f", r) 
+fmt.Println("Interest Rate:",R,"%")
 }
 func calcNP() {
 }
