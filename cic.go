@@ -21,10 +21,12 @@ fmt.Scanf("%f\n", &CH)
 if CH == FA {
         fmt.Println("You have Future Amount Calculator")
 		calcFA()
-    } else {
-        result := "END TEST"
+} else if CH == PA {
+	fmt.Println("You have Principal Amount Calculator")
+		calcPA()
+} else {
+	result := "END TEST"
         fmt.Println(result)
-    }
 }
 func calcFA() {
 var p float64
