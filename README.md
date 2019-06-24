@@ -43,7 +43,7 @@ We use SemVer for versioning. For the versions available, see the tags on this r
 
 ## Author
 ```
-juba666
+Ganesh Niruban
 ```
 See also the list of contributors who participated in this project.
 
