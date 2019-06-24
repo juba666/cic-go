@@ -27,9 +27,12 @@ if CH == FA {
 } else if CH == IR {
 	fmt.Println("You have chosen Interest Rate Calculator")
 		calcIR()
+} else if CH == NP {
+	fmt.Println("You have chosen Number of Periods Calculator")
+		calcNP()
 } else {
-	result := "END TEST"
-        fmt.Println(result)
+	error := "Enter a number between 1 & 4"
+        fmt.Println(error)
 }
 }
 func calcFA() {
@@ -87,4 +90,5 @@ R := fmt.Sprintf("%.2f", r)
 fmt.Println("Interest Rate:",R,"%")
 }
 func calcNP() {
+
 }
