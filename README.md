@@ -9,7 +9,7 @@ f = Future Amount(£)
 p = Principal Amount(£)
 r = Interest Rate(%)
 n = Number of Periods
-t = Type of Period (days-weeks-months-years)
+s = Type of Period (days-weeks-months-years)
 ```
 ### An example
 ```
@@ -23,7 +23,7 @@ f = £1771.56
 p = £1000
 r = 10% (10/100 for decimal)
 n = 6
-t = months
+s = months
 ```
 ## Built With 
 
