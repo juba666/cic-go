@@ -5,9 +5,9 @@ Compound interest is one of the most powerful forces in investing. Simple intere
 ```
 f = p × ((r/100)+1) ^ n
 
-f = Future Amount(£)
-p = Principal Amount(£)
-r = Interest Rate(%)
+f = Future Amount (£)
+p = Principal Amount (£)
+r = Interest Rate (%)
 n = Number of Periods
 s = Type of Period (days-weeks-months-years)
 ```
@@ -43,7 +43,7 @@ We use SemVer for versioning. For the versions available, see the tags on this r
 
 ## Author
 ```
-Ganesh Niruban
+juba666
 ```
 See also the list of contributors who participated in this project.
 
