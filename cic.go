@@ -28,6 +28,7 @@ if CH == FA {
 	result := "END TEST"
         fmt.Println(result)
 }
+}
 func calcFA() {
 var p float64
 var s string
@@ -58,8 +59,9 @@ fmt.Print("Enter a Number of Periods("+s+"): ")
 fmt.Scanf("%f\n", &n) 
 fmt.Print("Enter a Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
-p := math.Pow(float64(r)/100+1, float64(n))/f  
-P := fmt.Sprintf("%.2f", p) 
+p := math.Pow(float64(r)/100+1, float64(n)) 
+fp := f/p
+P := fmt.Sprintf("%.2f", fp) 
 fmt.Println("Principal Amount:£",P)
 }
 func calcIR() {
