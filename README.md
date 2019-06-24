@@ -15,7 +15,7 @@ s = Type of Period (days-weeks-months-years)
 ```
 #### An example
 ```
-If the £1000 loan was for a period of 6 months at 10%:
+If the £1000 loan was for a period of 6 months at 10% interest rate:
 
 1771.56 = 1000 × (0.1+1) ^ 6 months
 
@@ -36,6 +36,20 @@ p = Principal Amount (£)
 r = Interest Rate (%)
 n = Number of Periods
 s = Type of Period (days-weeks-months-years)
+```
+#### An example
+```
+How much do you need to invest, to get £2000 in 5 years at 10% interest rate?:
+
+1241.84 = 2000 / (0.1+1) ^ 6 months
+
+£1,000 × 1.10 × 1.10 × 1.10 × 1.10 × 1.10 × 1.10 = £1771.56
+
+f = £1771.56
+p = £1000
+r = 10% (10/100 for decimal)
+n = 6
+s = months
 ```
 ## Built With 
 
