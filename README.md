@@ -15,7 +15,7 @@ s = Type of Period (days-weeks-months-years)
 ```
 #### An example
 ```
-If the £1000 loan was for a period of 6 months at 10% interest rate:
+If the £1000 loan was for a period of 6 months at 10% interest rate, what is the future amount?:
 
 1771.56 = 1000 × (0.1+1) ^ 6 months
 
