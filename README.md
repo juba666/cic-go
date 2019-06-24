@@ -3,6 +3,22 @@
 ## Compound Interest Calculator
 Compound interest is one of the most powerful forces in investing. Simple interest simply means a set percentage of the principal for the period, and is rarely used in practice. On the other hand, compound interest is applied to both loans, investments and deposit accounts.
 
+- Calculate future amount for loan or investment using compound interest 
+
+      f = p × ((r/100)+1) ^ n
+
+- Calculate principal amount for loan or investment using compound interest 
+
+      p = f / ((r/100)+1) ^ n
+
+- Calculate interest rate for loan or investment using compound interest 
+
+      r = (f/p) ^ 1/n - 1
+
+- Calculate number of periods for loan or investment using compound interest 
+
+      n = ln(f/p) / ln(1+r)
+
 ### 1. Future Amount Calculator
 ```
 f = p × ((r/100)+1) ^ n
