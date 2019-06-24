@@ -10,7 +10,6 @@ fmt.Println("CHOOSE FROM THE FOLLOWING OPTIONS:\n"+
 "2.Principal Amount Calculator\n"+
 "3.Interest Rate Calculator\n"+
 "4.Number of Periods Calculator\n")
-  
 const FA = 1
 const PA = 2
 const IR = 3
@@ -90,7 +89,21 @@ R := fmt.Sprintf("%.2f", r)
 fmt.Println("Interest Rate:",R,"%")
 }
 func calcNP() {
-var x float64
-x := log(1)
-fmt.Println("Natural Log Test:",x)
+var f float64
+var s string
+var r float64
+var p float64
+fmt.Print("Enter a Principal Amount(£): ")
+fmt.Scanf("%f\n", &p)
+fmt.Print("Enter a Future Amount(£): ")
+fmt.Scanf("%f\n", &f)
+fmt.Print("Enter a Type of Period(days-weeks-months-years): ")
+fmt.Scanf("%s\n", &s)
+fmt.Print("Enter a Interest Rate(%): ")
+fmt.Scanf("%f\n", &r)
+fp := f/p
+rd := (r/100)+1
+n := math.Log(fp)/math.Log(rd)
+N := fmt.Sprintf("%.2f", n) 
+fmt.Println("Number of",s,":",N)
 }
