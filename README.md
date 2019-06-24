@@ -91,11 +91,15 @@ s = Type of Period (days-weeks-months-years)
 ```
 How many periods it will take to turn £1,000 into £2,000 at 10% interest rate?
 
+7.27 = ln(2000/1000) / ln(1+(r/100))
+
+ln(£2000/£1000) / ln(1+(10/100)) = 7.27 years
+
 f = £2000
 p = £1000
 r = 10% (10/100 for decimal)
-n = x
-s = (days-weeks-months-years)
+n = 7.27
+s = years
 ```
 ## Built With 
 
