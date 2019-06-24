@@ -1,6 +1,7 @@
 # cic.go
 
 ## Compound Interest Calculator
+Compound interest is one of the most powerful forces of investing. ... Simple interest simply means a set percentage of the principal every year, and is rarely used in practice. On the other hand, compound interest is applied to both loans and deposit accounts.
 ```
 f = p × ((r/100)+1) ^ n
 
@@ -10,9 +11,7 @@ r = Interest Rate(%)
 n = Number of Periods
 t = Type of Period (days-weeks-months-years)
 ```
-## An example
-
-Compound interest is one of the most powerful forces of investing. ... Simple interest simply means a set percentage of the principal every year, and is rarely used in practice. On the other hand, compound interest is applied to both loans and deposit accounts.
+### An example
 ```
 If the £1000 loan was for a period of 6 months at 10%:
 
