@@ -1,0 +1,2 @@
+# cic
+compound interest calculator
