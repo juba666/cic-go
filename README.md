@@ -65,7 +65,7 @@ s = Type of Period (days-weeks-months-years)
 ```
 You have £1,000, and want it to grow to £2,000 in 5 Years, what interest rate do you need?
 
-0.1487 = (2000/1000) ^ 1/5 - 1
+0.1487 = (2000/1000) ^ 1/5 years - 1
 
 (£2000/£1000) ^ 1/5 - 1 = 0.1487 * 100 = 14.87%
 
