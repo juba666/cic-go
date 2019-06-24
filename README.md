@@ -14,13 +14,13 @@ t = Type of Period (days-weeks-months-years)
 
 Compound interest is one of the most powerful forces of investing. ... Simple interest simply means a set percentage of the principal every year, and is rarely used in practice. On the other hand, compound interest is applied to both loans and deposit accounts.
 ```
+1771.56 = 1000 × ((10/100)+1) ^ 6 months
+
 f = £1771.56
 p = £1000
 r = 10% (/100 for decimal)
 n = 6
 t = months
-
-1771.56 = 1000 × ((10/100)+1) ^ 6 months
 ```
 ## Built With 
 
