@@ -53,7 +53,7 @@ s = years
 ```
 ### 3.Interest Rate Calculator
 ```
-??????????????????????????
+r = (f/p) ^ 1/n - 1
 
 f = Future Amount (£)
 p = Principal Amount (£)
@@ -63,13 +63,17 @@ s = Type of Period (days-weeks-months-years)
 ```
 #### An example
 ```
-????????????????????????????????????:
+You have £1,000, and want it to grow to £2,000 in 5 Years, what interest rate do you need?
 
-f = £x
-p = £x
-r = x% (x/100 for decimal)
-n = x
-s = x
+0.1487 = (2000/1000) ^ 1/5 - 1
+
+(£2000/£1000) ^ 1/5 - 1 = 0.1487 * 100 = 14.87%
+
+f = £2000
+p = £1000
+r = 14.87% (*100 for decimal)
+n = 5
+s = years
 ```
 ### 4.Number of Periods Calculator
 ```
