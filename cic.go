@@ -90,5 +90,7 @@ R := fmt.Sprintf("%.2f", r)
 fmt.Println("Interest Rate:",R,"%")
 }
 func calcNP() {
-
+var x float64
+x := log(1)
+fmt.Println("Natural Log Test:",x)
 }
