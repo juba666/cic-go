@@ -41,15 +41,15 @@ s = Type of Period (days-weeks-months-years)
 ```
 How much do you need to invest, to get £2000 in 5 years at 10% interest rate?:
 
-1241.84 = 2000 / (0.1+1) ^ 6 months
+1241.84 = 2000 / (0.1+1) ^ 5 years
 
-£1,000 × 1.10 × 1.10 × 1.10 × 1.10 × 1.10 × 1.10 = £1771.56
+£2,000 / (1.10 × 1.10 × 1.10 × 1.10 × 1.10) = £1241.84
 
-f = £1771.56
-p = £1000
+f = £2000
+p = £1241.84
 r = 10% (10/100 for decimal)
-n = 6
-s = months
+n = 5
+s = years
 ```
 ## Built With 
 
