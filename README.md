@@ -1,7 +1,7 @@
 # cic.go
 
 ## Compound Interest Calculator
-Compound interest is one of the most powerful forces of investing. ... Simple interest simply means a set percentage of the principal every year, and is rarely used in practice. On the other hand, compound interest is applied to both loans and deposit accounts.
+Compound interest is one of the most powerful forces in investing. Simple interest simply means a set percentage of the principal for the period, and is rarely used in practice. On the other hand, compound interest is applied to both loans, investments and deposit accounts.
 ```
 f = p × ((r/100)+1) ^ n
 
@@ -37,7 +37,7 @@ Please read CONTRIBUTING.md for details on our code of conduct, and the process 
 
 We use SemVer for versioning. For the versions available, see the tags on this repository.
 
-## Authors
+## Author
 ```
 Ganesh Niruban
 ```
@@ -48,3 +48,7 @@ See also the list of contributors who participated in this project.
 This project is licensed under the GNU General Public License v3.0 - see the LICENSE.md file for details.
 
 ## Acknowledgments
+
+https://www.mathsisfun.com/money/compound-interest.html
+
+https://en.wikipedia.org/wiki/Compound_interest
