@@ -153,7 +153,7 @@ n = 2 (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.7182818284
 e = (1+((r/100)/n)) ^ n − 1
 
 e = Effective Annual Interest Rate (x100 for percentage)
-r = Interest Rate (%)
+r = Nominal Interest Rate (%)
 n = Number of Periods within the year
 ```
 #### An example
