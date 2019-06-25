@@ -9,13 +9,15 @@ fmt.Println("CHOOSE FROM THE FOLLOWING OPTIONS:\n"+
 "1.Future Amount Calculator\n"+
 "2.Principal Amount Calculator\n"+
 "3.Interest Rate Calculator\n"+
-"4.Number of Periods Calculator\n")
+"4.Number of Periods Calculator\n"+
+"5.Periodic Compounding Future Amount Calculator\n")
 const FA = 1
 const PA = 2
 const IR = 3
 const NP = 4
+const PCFA = 5
 var CH float64
-fmt.Print("Enter a choice(1-4): ")
+fmt.Print("Enter a choice(1-5): ")
 fmt.Scanf("%f\n", &CH)
 if CH == FA {
         fmt.Println("You have chosen Future Amount Calculator")
@@ -29,8 +31,11 @@ if CH == FA {
 } else if CH == NP {
 	fmt.Println("You have chosen Number of Periods Calculator")
 		calcNP()
+} else if CH == PCFA {
+	fmt.Println("You have chosen Periodic Compounding Future Amount Calculator")
+		calcPCFA()
 } else {
-	error := "Enter a number between 1 & 4"
+	error := "Enter a number between 1 & 5"
         fmt.Println(error)
 }
 }
@@ -106,4 +111,19 @@ rd := (r/100)+1
 n := math.Log(fp)/math.Log(rd)
 N := fmt.Sprintf("%.2f", n) 
 fmt.Println("Number of",s,":",N)
+}
+func calcPCFA() {
+var p float64
+var n float64
+var r float64
+fmt.Print("Enter a Principal Amount(£): ")
+fmt.Scanf("%f\n", &p)
+fmt.Print("Enter a Number of Periods within the year: ") 
+fmt.Scanf("%f\n", &n) 
+fmt.Print("Enter a Interest Rate(%): ")
+fmt.Scanf("%f\n", &r)
+rn := (r/100)/n
+f := math.Pow(float64(rn)+1, float64(n))*p
+F := fmt.Sprintf("%.2f", f) 
+fmt.Println("Periodic Compounding Future Amount:£",F)
 }
