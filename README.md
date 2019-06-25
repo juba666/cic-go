@@ -144,6 +144,25 @@ r = 10% (10/100 for decimal)
 n = 2 (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
 49669676277240766303535475945713821785251664274)
 ```
+### 6. Effective Annual Interest Rate Calculator
+```
+e = (1+((r/100)/n)) ^ n − 1
+
+r = Interest Rate (%)
+n = Number of Periods within the year
+```
+#### An example
+```
+What interest rate do you get when the ad says "6% compounded monthly"?
+
+0.06168 = (1+((6/100)/12)) ^ 12 − 1
+
+0.06168 x 100 = 6.168%
+
+r = 6% (6/100 for decimal)
+n = 12 (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
+49669676277240766303535475945713821785251664274)
+```
 ## Built With 
 
 Go - Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
