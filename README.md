@@ -148,17 +148,19 @@ n = 2 (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.7182818284
 ```
 e = (1+((r/100)/n)) ^ n − 1
 
+e = Effective Annual Interest Rate (x100 for decimal)
 r = Interest Rate (%)
 n = Number of Periods within the year
 ```
 #### An example
 ```
-What interest rate do you get when the ad says "6% compounded monthly"?
+What effective annual interest rate do you get when the ad says "6% compounded monthly"?
 
 0.06168 = (1+((6/100)/12)) ^ 12 − 1
 
 0.06168 x 100 = 6.168%
 
+e = 6.168%
 r = 6% (6/100 for decimal)
 n = 12 (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
 49669676277240766303535475945713821785251664274)
