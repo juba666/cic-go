@@ -121,6 +121,28 @@ r = 10% (10/100 for decimal)
 n = 7.27
 s = years
 ```
+### 5. Periodic Compounding Future Amount Calculator
+```
+f = p × (((r/100)/n)+1) ^ n
+
+f = Future Amount (£)
+p = Principal Amount (£)
+r = Interest Rate (%)
+n = Number of Periods within the year
+```
+#### An example
+```
+If £1000 was invested at 10% interest rate, "Compounded Semiannually"; what is the future amount?:
+
+1102.5 = 1000 × (((10/100)/2)+1) ^ 2
+
+£1000 × (((10/100)/2)+1) ^ 2 = £1102.50
+
+f = £1102.50
+p = £1000
+r = 10% (10/100 for decimal)
+n = 2 (Semiannually)
+```
 ## Built With 
 
 Go - Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
