@@ -141,7 +141,7 @@ If £1000 was invested at 10% interest rate, "Compounded Semiannually"; what is 
 f = £1102.50
 p = £1000
 r = 10% (10/100 for decimal)
-n = 2 (Semiannually=2,Quarterly=4,Monthly=12,Weekly=56,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
+n = 2 (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
 49669676277240766303535475945713821785251664274)
 ```
 ## Built With 
