@@ -22,6 +22,10 @@ Compound interest is one of the most powerful forces in investing. Simple intere
 - Calculate periodic compounding future amount for loan or investment
 
       f = p × (((r/100)/n)+1) ^ n
+      
+- Calculate effective annual interest rate for loan or investment
+
+      e = (1+((r/100)/n)) ^ n − 1
 
 ### 1. Future Amount Calculator
 ```
