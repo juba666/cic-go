@@ -5,7 +5,9 @@ import(
 "os"
 )
 func main() {
-fmt.Println("CHOOSE FROM THE FOLLOWING OPTIONS:\n"+
+fmt.Println("Welcome to cic! (Compound Interest Calculator)\n"+
+"                           \n"+
+"CHOOSE FROM THE FOLLOWING OPTIONS:\n"+
 "                           \n"+
 "1.Future Amount Calculator\n"+
 "2.Principal Amount Calculator\n"+
@@ -43,7 +45,7 @@ if CH == FA {
 	fmt.Println("You have chosen Effective Annual Interest Rate Calculator")
 		calcEAIR()
 } else if CH == EX {
-	fmt.Println("Thank You for using Compound Interest Calculator!")
+	fmt.Println("Thank You for using cic!")
 		os.Exit(0)
 } else {
 	error := "ERROR: you did not enter a number between 1 & 7"
