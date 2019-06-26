@@ -66,7 +66,7 @@ if !(p > 0) || ((strings.ContainsRune(tp, '\u00a3')) || ((strings.ContainsRune(t
 } else {
 fmt.Print("Enter a Type of Period(days-weeks-months-years): ")
 fmt.Scanf("%s\n", &s)
-fmt.Print("Enter a Number of Periods("+s+"): ") }
+fmt.Print("Enter a Number of Periods("+s+"): ")}
 fmt.Scanf("%f\n", &n)
 if !(n > 0) {
         fmt.Println("ERROR: you did not enter a number greater than zero")
