@@ -132,7 +132,8 @@ f = p × (((r/100)/n)+1) ^ n
 f = Future Amount (£)
 p = Principal Amount (£)
 r = Interest Rate (%)
-n = Number of Periods within the year
+n = Number of Periods within the year (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
+49669676277240766303535475945713821785251664274)
 ```
 #### An example
 ```
@@ -145,8 +146,7 @@ If £1000 was invested at 10% interest rate, "Compounded Semiannually"; what is 
 f = £1102.50
 p = £1000
 r = 10% (10/100 for decimal)
-n = 2 (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
-49669676277240766303535475945713821785251664274)
+n = 2 
 ```
 ### 6. Effective Annual Interest Rate Calculator
 ```
@@ -154,7 +154,8 @@ e = (1+((r/100)/n)) ^ n − 1
 
 e = Effective Annual Interest Rate (%)(x100 for percentage)
 r = Nominal Interest Rate (%)
-n = Number of Periods within the year
+n = Number of Periods within the year (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
+49669676277240766303535475945713821785251664274)
 ```
 #### An example
 ```
@@ -166,8 +167,7 @@ What effective annual interest rate do you get when the ad says "6% compounded m
 
 e = 6.168%
 r = 6% (6/100 for decimal)
-n = 12 (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
-49669676277240766303535475945713821785251664274)
+n = 12 
 ```
 ## Built With 
 
