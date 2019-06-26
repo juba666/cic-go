@@ -23,7 +23,7 @@ const PCFA = 5
 const EAIR = 6
 const EX = 7
 var CH float64
-fmt.Print("Enter a choice(1-6): ")
+fmt.Print("Enter a choice(1-7): ")
 fmt.Scanf("%f\n", &CH)
 if CH == FA {
         fmt.Println("You have chosen Future Amount Calculator")
@@ -47,7 +47,7 @@ if CH == FA {
 	fmt.Println("Thank You for using Compound Interest Calculator!")
 		os.Exit(0)
 } else {
-	error := "ERROR: you did not enter a number between 1 & 6"
+	error := "ERROR: you did not enter a number between 1 & 7"
         fmt.Println("\n",error)
 		main()
 }
