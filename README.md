@@ -81,7 +81,7 @@ r = (f/p) ^ 1/n - 1
 
 f = Future Amount (£)
 p = Principal Amount (£)
-r = Interest Rate (%)
+r = Interest Rate (%)(x100 for percentage)
 n = Number of Periods
 s = Type of Period (days-weeks-months-years)
 ```
@@ -91,11 +91,11 @@ You have £1,000, and want it to grow to £2,000 in 5 Years, what interest rate 
 
 0.1487 = (2000/1000) ^ 1/5 years - 1
 
-(£2000/£1000) ^ 1/5 - 1 = 0.1487 * 100 = 14.87%
+(£2000/£1000) ^ 1/5 - 1 = 0.1487 x 100 = 14.87%
 
 f = £2000
 p = £1000
-r = 14.87% (*100 for decimal)
+r = 14.87% 
 n = 5
 s = years
 ```
