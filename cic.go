@@ -138,7 +138,7 @@ var r float64
 var n float64
 fmt.Print("Enter a Number of Periods within the year: ") 
 fmt.Scanf("%f\n", &n) 
-fmt.Print("Enter a Interest Rate(%): ")
+fmt.Print("Enter a Nominal Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
 rn := (r/100)/n
 R := math.Pow(float64(rn)+1, float64(n))-1
