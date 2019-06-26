@@ -41,8 +41,9 @@ if CH == FA {
 	fmt.Println("You have chosen Effective Annual Interest Rate Calculator")
 		calcEAIR()
 } else {
-	error := "Enter a number between 1 & 6"
-        fmt.Println(error)
+	error := "ERROR: you did not enter a number between 1 & 6"
+        fmt.Println("\n",error)
+		main()
 }
 }
 func calcFA() {
