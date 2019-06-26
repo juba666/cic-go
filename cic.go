@@ -1,6 +1,7 @@
 package main
-import (
+import(
 "fmt"
+"strings"
 "math"
 "os"
 )
@@ -13,8 +14,7 @@ fmt.Println("CHOOSE FROM THE FOLLOWING OPTIONS:\n"+
 "4.Number of Periods Calculator\n"+
 "5.Periodic Compounding Future Amount Calculator\n"+
 "6.Effective Annual Interest Rate Calculator\n"+
-"7.Exit\n"+
-"                           \n")  
+"7.Exit\n")                         
 const FA = 1
 const PA = 2
 const IR = 3
@@ -59,15 +59,29 @@ var n float64
 var r float64
 fmt.Print("Enter a Principal Amount(£): ")
 fmt.Scanf("%f\n", &p)
+tp := fmt.Sprintf("%f", p)
+if !(p > 0) || ((strings.ContainsRune(tp, '\u00a3')) || ((strings.ContainsRune(tp, '$')))) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a currency symbol")
+		calcFA()
+} else {
 fmt.Print("Enter a Type of Period(days-weeks-months-years): ")
 fmt.Scanf("%s\n", &s)
-fmt.Print("Enter a Number of Periods("+s+"): ") 
-fmt.Scanf("%f\n", &n) 
-fmt.Print("Enter a Interest Rate(%): ")
+fmt.Print("Enter a Number of Periods("+s+"): ") }
+fmt.Scanf("%f\n", &n)
+if !(n > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero")
+		calcFA()
+} else {
+fmt.Print("Enter a Interest Rate(%): ")}
 fmt.Scanf("%f\n", &r)
-f := math.Pow(float64(r)/100+1, float64(n))*p  
-F := fmt.Sprintf("%.2f", f) 
-fmt.Println("Future Amount:£",F)
+if !(r > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero")
+		calcFA()
+} else {
+f := math.Pow(float64(r)/100+1, float64(n))*p
+F := fmt.Sprintf("%.2f", f)
+defer fmt.Println("Future Amount:£",F)
+}
 }
 func calcPA() {
 var f float64
