@@ -125,19 +125,36 @@ var f float64
 var s string
 var n float64
 var p float64
+pa:
 fmt.Print("Enter a Principal Amount(£): ")
 fmt.Scanf("%f\n", &p)
+if !(p > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto pa
+} else {
+goto fa}
+fa:
 fmt.Print("Enter a Future Amount(£): ")
 fmt.Scanf("%f\n", &f)
+if !(f > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto fa
+} else {
 fmt.Print("Enter a Type of Period(days-weeks-months-years): ")
-fmt.Scanf("%s\n", &s)
+fmt.Scanf("%s\n", &s)}
+np:
 fmt.Print("Enter a Number of Periods("+s+"): ") 
-fmt.Scanf("%f\n", &n) 
+fmt.Scanf("%f\n", &n)
+if !(n > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero")
+		goto np
+} else {
 fp := f/p
 nd := 1/n
 r := (math.Pow(float64(fp), float64(nd))-1)*100
 R := fmt.Sprintf("%.2f", r) 
 fmt.Println("Interest Rate:",R,"%")
+}
 }
 func calcNP() {
 var f float64
