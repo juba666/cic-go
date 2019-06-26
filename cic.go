@@ -2,6 +2,7 @@ package main
 import (
 "fmt"
 "math"
+"os"
 )
 func main() {
 fmt.Println("CHOOSE FROM THE FOLLOWING OPTIONS:\n"+
@@ -11,7 +12,8 @@ fmt.Println("CHOOSE FROM THE FOLLOWING OPTIONS:\n"+
 "3.Interest Rate Calculator\n"+
 "4.Number of Periods Calculator\n"+
 "5.Periodic Compounding Future Amount Calculator\n"+
-"6.Effective Annual Interest Rate Calculator"+
+"6.Effective Annual Interest Rate Calculator\n"+
+"7.Exit\n"+
 "                           \n")  
 const FA = 1
 const PA = 2
@@ -19,6 +21,7 @@ const IR = 3
 const NP = 4
 const PCFA = 5
 const EAIR = 6
+const EX = 7
 var CH float64
 fmt.Print("Enter a choice(1-6): ")
 fmt.Scanf("%f\n", &CH)
@@ -40,6 +43,9 @@ if CH == FA {
 } else if CH == EAIR {
 	fmt.Println("You have chosen Effective Annual Interest Rate Calculator")
 		calcEAIR()
+} else if CH == EX {
+	fmt.Println("Thank You for using Compound Interest Calculator!")
+		os.Exit(0)
 } else {
 	error := "ERROR: you did not enter a number between 1 & 6"
         fmt.Println("\n",error)
