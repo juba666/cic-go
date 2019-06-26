@@ -1,7 +1,6 @@
 package main
 import(
 "fmt"
-"strings"
 "math"
 "os"
 )
@@ -57,30 +56,33 @@ var p float64
 var s string
 var n float64
 var r float64
+pa:
 fmt.Print("Enter a Principal Amount(£): ")
 fmt.Scanf("%f\n", &p)
-tp := fmt.Sprintf("%f", p)
-if !(p > 0) || ((strings.ContainsRune(tp, '\u00a3')) || ((strings.ContainsRune(tp, '$')))) {
-        fmt.Println("ERROR: you did not enter a number greater than zero, or included a currency symbol")
-		calcFA()
+if !(p > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto pa
 } else {
 fmt.Print("Enter a Type of Period(days-weeks-months-years): ")
-fmt.Scanf("%s\n", &s)
-fmt.Print("Enter a Number of Periods("+s+"): ")}
+fmt.Scanf("%s\n", &s)}
+np:
+fmt.Print("Enter a Number of Periods("+s+"): ")
 fmt.Scanf("%f\n", &n)
 if !(n > 0) {
         fmt.Println("ERROR: you did not enter a number greater than zero")
-		calcFA()
+		goto np
 } else {
-fmt.Print("Enter a Interest Rate(%): ")}
+goto ir}
+ir:
+fmt.Print("Enter a Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
 if !(r > 0) {
-        fmt.Println("ERROR: you did not enter a number greater than zero")
-		calcFA()
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto ir
 } else {
 f := math.Pow(float64(r)/100+1, float64(n))*p
 F := fmt.Sprintf("%.2f", f)
-defer fmt.Println("Future Amount:£",F)
+fmt.Println("Future Amount:£",F)
 }
 }
 func calcPA() {
@@ -88,18 +90,35 @@ var f float64
 var s string
 var n float64
 var r float64
+fa:
 fmt.Print("Enter a Future Amount(£): ")
 fmt.Scanf("%f\n", &f)
+if !(f > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto fa
+} else {
 fmt.Print("Enter a Type of Period(days-weeks-months-years): ")
-fmt.Scanf("%s\n", &s)
-fmt.Print("Enter a Number of Periods("+s+"): ") 
-fmt.Scanf("%f\n", &n) 
+fmt.Scanf("%s\n", &s)}
+np:
+fmt.Print("Enter a Number of Periods("+s+"): ")
+fmt.Scanf("%f\n", &n)
+if !(n > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero")
+		goto np
+} else {
+goto ir}
+ir:
 fmt.Print("Enter a Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
+if !(r > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto ir
+} else {
 p := math.Pow(float64(r)/100+1, float64(n)) 
 fp := f/p
 P := fmt.Sprintf("%.2f", fp) 
 fmt.Println("Principal Amount:£",P)
+}
 }
 func calcIR() {
 var f float64
