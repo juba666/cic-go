@@ -230,13 +230,25 @@ fmt.Println("Periodic Compounding Future Amount:£",F)
 func calcEAIR() {
 var r float64
 var n float64
+np:
 fmt.Print("Enter a Number of Periods within the year: ") 
-fmt.Scanf("%f\n", &n) 
+fmt.Scanf("%f\n", &n)
+if !(n > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero")
+		goto np
+} else {
+goto ir}
+ir:
 fmt.Print("Enter a Nominal Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
+if !(r > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto ir
+} else {
 rn := (r/100)/n
 R := math.Pow(float64(rn)+1, float64(n))-1
 e := R*100
 E := fmt.Sprintf("%.3f", e) 
 fmt.Println("Effective Annual Interest Rate:",E,"%")
+}
 }
