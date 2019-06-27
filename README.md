@@ -28,11 +28,11 @@ Compound interest is one of the most powerful forces in investing. Simple intere
       
 - Calculate present value of annuity 
 
-      v = p × 1 − (1+r) ^ −n / r 
+      v = p × (1 − (1+r) ^ −n) / r
 
 - Calculate value of each payment for annuity 
 
-      p = v × r / 1 − (1+r) ^ −n 
+      p = v × r / (1 − (1+r) ^ −n)
 
 ## 1. Future Amount Calculator
 ```
@@ -94,7 +94,7 @@ s = Type of Period (days-weeks-months-years)
 ```
 ### An example
 ```
-You have £1,000, and want it to grow to £2,000 in 5 Years, what interest rate do you need?
+You have £1,000, and want it to grow to £2,000 in 5 Years, what interest rate do you need?:
 
 0.1487 = (2000/1000) ^ 1/5 years - 1
 
@@ -120,7 +120,7 @@ s = Type of Period (days-weeks-months-years)
 ```
 ### An example
 ```
-How many years will it take to turn £1,000 into £2,000 at 10% interest rate?
+How many years will it take to turn £1,000 into £2,000 at 10% interest rate?:
 
 7.27 = ln(2000/1000) / ln(1+(r/100))
 
@@ -166,7 +166,7 @@ n = Number of Periods within the year (Semiannually=2,Quarterly=4,Monthly=12,Dai
 ```
 ### An example
 ```
-What effective annual interest rate do you get when the ad says "6% compounded monthly"?
+What effective annual interest rate do you get when the ad says "6% compounded monthly"?:
 
 0.06168 = (1+((6/100)/12)) ^ 12 − 1
 
@@ -187,7 +187,7 @@ r = Interest Rate per Period
 ```
 ### An example
 ```
-What is the present value for annuity of £400 a month for 5 years?, use a monthly interest rate of 1%.
+What is the present value for annuity of £400 a month for 5 years?, use a monthly interest rate of 1%:
 
 17982.02 = 400 x (1 - (1+(1/100)) ^ -60) / 0.01
 
@@ -200,11 +200,26 @@ r = 1% (1/100 for decimal)
 ```
 ## 8. Value of Each Payment for Annuity Calculator
 ```
+p = v × r / (1 − (1+r) ^ −n)
 
+p = Value of Each Payment for Annuity
+v = Present Value of Annuity 
+n = Number of Periods
+r = Interest Rate per Period
 ```
 ### An example
 ```
+Say you have £10,000 and want to get a monthly income for 6 years out of it, 
+how much could you get each month?, assume a monthly interest rate of 0.5%:
 
+165.73 = 10000 × (0.5/100) / (1 − (1+(0.5/100)) ^ −72)
+
+£10000 × (0.5/100) / (1 − (1+(0.5/100)) ^ −72) = £165.73
+
+p = £165.73
+v = £10000
+n = 72 (12 months x 6 years)
+r = 0.5% (0.5/100 for decimal)
 ```
 ## Built With 
 
