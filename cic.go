@@ -31,9 +31,7 @@ fmt.Println("Welcome to cic! (Compound Interest Calculator)\n"+
 "5.Periodic Compounding Future Amount Calculator\n"+
 "6.Effective Annual Interest Rate Calculator\n"+
 "7.Present Value of Annuity Calculator\n"+
-"8.Value of Each Payment for Annuity Calculator\n"+
-"9.Exit\n"+
-"10.Help\n")}                   
+"8.Value of Each Payment for Annuity Calculator\n")}                   
 choice:
 fmt.Print("[9=Exit,10=Help]\n"+
 "Enter a choice(1-10): ")
@@ -74,8 +72,8 @@ if CH == FA {
 "4.Number of Periods Calculator\n"+
 "5.Periodic Compounding Future Amount Calculator\n"+
 "6.Effective Annual Interest Rate Calculator\n"+
-"7.Exit\n"+
-"8.Help\n")
+"7.Present Value of Annuity Calculator\n"+
+"8.Value of Each Payment for Annuity Calculator\n")
 counter++
 main()
 } else {
@@ -296,8 +294,38 @@ main()
 }
 }
 func calcPV() {
+var p float64
+var n float64
+var r float64
+pv:
+fmt.Print("Enter a Value of Each Payment for Annuity: ") 
+fmt.Scanf("%f\n", &p)
+if !(p > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero")
+		goto pv
+} else {
+goto np}
+np:
+fmt.Print("Enter a Number of Periods: ") 
+fmt.Scanf("%f\n", &n)
+if !(n > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero")
+		goto np
+} else {
+goto ir}
+ir:
+fmt.Print("Enter a Interest Rate per Period(%): ")
+fmt.Scanf("%f\n", &r)
+if !(r > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto ir
+} else {
+//v := p*(math.Pow(float64(r/100)+1, float64(n*-1))/(r/100))
+//V := fmt.Sprintf("%.2f", v) 
+//fmt.Println("Present Value of Annuity:£",V)
 counter++
 main()
+}
 }
 func calcVP() {
 counter++
