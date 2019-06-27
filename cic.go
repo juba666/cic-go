@@ -198,16 +198,34 @@ func calcPCFA() {
 var p float64
 var n float64
 var r float64
+pa:
 fmt.Print("Enter a Principal Amount(£): ")
 fmt.Scanf("%f\n", &p)
+if !(p > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto pa
+} else {
+goto np}
+np:
 fmt.Print("Enter a Number of Periods within the year: ") 
-fmt.Scanf("%f\n", &n) 
+fmt.Scanf("%f\n", &n)
+if !(n > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero")
+		goto np
+} else {
+goto ir}
+ir:
 fmt.Print("Enter a Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
+if !(r > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto ir
+} else {
 rn := (r/100)/n
 f := math.Pow(float64(rn)+1, float64(n))*p
 F := fmt.Sprintf("%.2f", f) 
 fmt.Println("Periodic Compounding Future Amount:£",F)
+}
 }
 func calcEAIR() {
 var r float64
