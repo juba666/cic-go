@@ -163,19 +163,36 @@ var f float64
 var s string
 var r float64
 var p float64
+pa:
 fmt.Print("Enter a Principal Amount(£): ")
 fmt.Scanf("%f\n", &p)
+if !(p > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto pa
+} else {
+goto fa}
+fa:
 fmt.Print("Enter a Future Amount(£): ")
 fmt.Scanf("%f\n", &f)
+if !(f > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto fa
+} else {
 fmt.Print("Enter a Type of Period(days-weeks-months-years): ")
-fmt.Scanf("%s\n", &s)
+fmt.Scanf("%s\n", &s)}
+ir:
 fmt.Print("Enter a Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
+if !(r > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto ir
+} else {
 fp := f/p
 rd := (r/100)+1
 n := math.Log(fp)/math.Log(rd)
 N := fmt.Sprintf("%.2f", n) 
 fmt.Println("Number of",s,":",N)
+}
 }
 func calcPCFA() {
 var p float64
