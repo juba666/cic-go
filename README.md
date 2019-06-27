@@ -26,13 +26,13 @@ Compound interest is one of the most powerful forces in investing. Simple intere
 
       e = (1+((r/100)/n)) ^ n − 1
       
-- Calculate principal value of annuity 
+- Calculate present value of annuity 
 
-      pv = p × 1 − (1+r) ^ −n / r 
+      v = p × 1 − (1+r) ^ −n / r 
 
 - Calculate value of each payment for annuity 
 
-      p = pv × r / 1 − (1+r) ^ −n 
+      p = v × r / 1 − (1+r) ^ −n 
 
 ## 1. Future Amount Calculator
 ```
@@ -176,13 +176,27 @@ e = 6.168%
 r = 6% (6/100 for decimal)
 n = 12 
 ```
-## 7. Principal Value of Annuity Calculator
+## 7. Present Value of Annuity Calculator
 ```
+v = p × 1 − (1+r) ^ −n / r
 
+v = Present Value of Annuity 
+p = Value of Each Payment for Annuity
+n = Number of Periods
+r = Interest Rate per Period
 ```
 ### An example
 ```
+What is the present value for annuity of £400 a month for 5 years?, use a monthly interest rate of 1%.
 
+17982.02 = 400 x 1 - (1+(1/100)) ^ -60 / 0.01
+
+£400 x 1 - (1+(1/100)) ^ -60 / 0.01 = £17982.02
+
+v = £17982.02 
+p = £400
+n = 60 (12 months x 5 years)
+r = 1% (1/100 for decimal)
 ```
 ## 8. Value of Each Payment for Annuity Calculator
 ```
