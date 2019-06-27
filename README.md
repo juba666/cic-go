@@ -25,6 +25,14 @@ Compound interest is one of the most powerful forces in investing. Simple intere
 - Calculate effective annual interest rate for loan or investment
 
       e = (1+((r/100)/n)) ^ n − 1
+      
+- Calculate principal value of annuity 
+
+      pv = p × 1 − (1+r) ^ −n / r 
+
+- Calculate value of each payment for annuity 
+
+      p = pv × r / 1 − (1+r) ^ −n 
 
 ## 1. Future Amount Calculator
 ```
@@ -167,6 +175,22 @@ What effective annual interest rate do you get when the ad says "6% compounded m
 e = 6.168%
 r = 6% (6/100 for decimal)
 n = 12 
+```
+## 7. Principal Value of Annuity Calculator
+```
+
+```
+### An example
+```
+
+```
+## 8. Value of Each Payment for Annuity Calculator
+```
+
+```
+### An example
+```
+
 ```
 ## Built With 
 
