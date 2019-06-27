@@ -189,9 +189,9 @@ r = Interest Rate per Period
 ```
 What is the present value for annuity of £400 a month for 5 years?, use a monthly interest rate of 1%:
 
-17982.02 = 400 x (1 - (1+(1/100)) ^ -60) / 0.01
+17982.02 = 400 x (1 - (1+(1/100)) ^ -60) / (1/100)
 
-£400 x (1 - (1+(1/100)) ^ -60) / 0.01 = £17982.02
+£400 x (1 - (1+(1/100)) ^ -60) / (1/100) = £17982.02
 
 v = £17982.02 
 p = £400
