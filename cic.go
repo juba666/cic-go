@@ -4,7 +4,20 @@ import(
 "math"
 "os"
 )
+const FA = 1
+const PA = 2
+const IR = 3
+const NP = 4
+const PCFA = 5
+const EAIR = 6
+const EX = 7
+const HP = 8
+var CH float64
+var counter int
 func main() {
+if counter > 0 {
+goto choice
+} else {
 fmt.Println("Welcome to cic! (Compound Interest Calculator)\n"+
 "                           \n"+
 "CHOOSE FROM THE FOLLOWING OPTIONS:\n"+
@@ -15,16 +28,11 @@ fmt.Println("Welcome to cic! (Compound Interest Calculator)\n"+
 "4.Number of Periods Calculator\n"+
 "5.Periodic Compounding Future Amount Calculator\n"+
 "6.Effective Annual Interest Rate Calculator\n"+
-"7.Exit\n")                         
-const FA = 1
-const PA = 2
-const IR = 3
-const NP = 4
-const PCFA = 5
-const EAIR = 6
-const EX = 7
-var CH float64
-fmt.Print("Enter a choice(1-7): ")
+"7.Exit\n"+
+"8.Help\n")}                    
+choice:
+fmt.Print("[7=Exit,8=Help]\n"+
+"Enter a choice(1-8): ")
 fmt.Scanf("%f\n", &CH)
 if CH == FA {
         fmt.Println("You have chosen Future Amount Calculator")
@@ -47,10 +55,23 @@ if CH == FA {
 } else if CH == EX {
 	fmt.Println("Thank You for using cic!")
 		os.Exit(0)
+} else if CH == HP {
+	fmt.Println("CHOOSE FROM THE FOLLOWING OPTIONS:\n"+
+"                           \n"+
+"1.Future Amount Calculator\n"+
+"2.Principal Amount Calculator\n"+
+"3.Interest Rate Calculator\n"+
+"4.Number of Periods Calculator\n"+
+"5.Periodic Compounding Future Amount Calculator\n"+
+"6.Effective Annual Interest Rate Calculator\n"+
+"7.Exit\n"+
+"8.Help\n")
+counter++
+main()
 } else {
-	error := "ERROR: you did not enter a number between 1 & 7"
+	error := "ERROR: you did not enter a number between 1 & 8"
         fmt.Println("\n",error)
-		main()
+		goto choice
 }
 }
 func calcFA() {
@@ -85,6 +106,8 @@ if !(r > 0) {
 f := math.Pow(float64(r)/100+1, float64(n))*p
 F := fmt.Sprintf("%.2f", f)
 fmt.Println("Future Amount:£",F)
+counter++
+main()
 }
 }
 func calcPA() {
@@ -120,6 +143,8 @@ p := math.Pow(float64(r)/100+1, float64(n))
 fp := f/p
 P := fmt.Sprintf("%.2f", fp) 
 fmt.Println("Principal Amount:£",P)
+counter++
+main()
 }
 }
 func calcIR() {
@@ -156,6 +181,8 @@ nd := 1/n
 r := (math.Pow(float64(fp), float64(nd))-1)*100
 R := fmt.Sprintf("%.2f", r) 
 fmt.Println("Interest Rate:",R,"%")
+counter++
+main()
 }
 }
 func calcNP() {
@@ -192,6 +219,8 @@ rd := (r/100)+1
 n := math.Log(fp)/math.Log(rd)
 N := fmt.Sprintf("%.2f", n) 
 fmt.Println("Number of",s,":",N)
+counter++
+main()
 }
 }
 func calcPCFA() {
@@ -225,6 +254,8 @@ rn := (r/100)/n
 f := math.Pow(float64(rn)+1, float64(n))*p
 F := fmt.Sprintf("%.2f", f) 
 fmt.Println("Periodic Compounding Future Amount:£",F)
+counter++
+main()
 }
 }
 func calcEAIR() {
@@ -250,5 +281,15 @@ R := math.Pow(float64(rn)+1, float64(n))-1
 e := R*100
 E := fmt.Sprintf("%.3f", e) 
 fmt.Println("Effective Annual Interest Rate:",E,"%")
+counter++
+main()
 }
+}
+func calcPV() {
+counter++
+main()
+}
+func calcVP() {
+counter++
+main()
 }
