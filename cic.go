@@ -10,8 +10,10 @@ const IR = 3
 const NP = 4
 const PCFA = 5
 const EAIR = 6
-const EX = 7
-const HP = 8
+const PV = 7
+const VP = 8
+const EX = 9
+const HP = 10
 var CH float64
 var counter int
 func main() {
@@ -28,11 +30,13 @@ fmt.Println("Welcome to cic! (Compound Interest Calculator)\n"+
 "4.Number of Periods Calculator\n"+
 "5.Periodic Compounding Future Amount Calculator\n"+
 "6.Effective Annual Interest Rate Calculator\n"+
-"7.Exit\n"+
-"8.Help\n")}                    
+"7.Present Value of Annuity Calculator\n"+
+"8.Value of Each Payment for Annuity Calculator\n"+
+"9.Exit\n"+
+"10.Help\n")}                   
 choice:
-fmt.Print("[7=Exit,8=Help]\n"+
-"Enter a choice(1-8): ")
+fmt.Print("[9=Exit,10=Help]\n"+
+"Enter a choice(1-10): ")
 fmt.Scanf("%f\n", &CH)
 if CH == FA {
         fmt.Println("You have chosen Future Amount Calculator")
@@ -52,6 +56,12 @@ if CH == FA {
 } else if CH == EAIR {
 	fmt.Println("You have chosen Effective Annual Interest Rate Calculator")
 		calcEAIR()
+} else if CH == PV {
+	fmt.Println("You have chosen Effective Annual Interest Rate Calculator")
+		calcPV()
+} else if CH == VP {
+	fmt.Println("You have chosen Effective Annual Interest Rate Calculator")
+		calcVP()
 } else if CH == EX {
 	fmt.Println("Thank You for using cic!")
 		os.Exit(0)
@@ -69,8 +79,8 @@ if CH == FA {
 counter++
 main()
 } else {
-	error := "ERROR: you did not enter a number between 1 & 8"
-        fmt.Println("\n",error)
+	error := "ERROR: you did not enter a number between 1 & 10"
+        fmt.Println(error)
 		goto choice
 }
 }
