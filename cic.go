@@ -320,9 +320,12 @@ if !(r > 0) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
-//v := p*(math.Pow(float64(r/100)+1, float64(n*-1))/(r/100))
-//V := fmt.Sprintf("%.2f", v) 
-//fmt.Println("Present Value of Annuity:£",V)
+tr := (r/100)+1
+tn := n*-1
+tv := math.Pow(float64(tr), float64(tn))
+v := ((1-tv)/(r/100))*p
+V := fmt.Sprintf("%.2f", v) 
+fmt.Println("Present Value of Annuity:£",V)
 counter++
 main()
 }
