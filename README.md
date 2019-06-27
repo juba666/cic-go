@@ -1,6 +1,5 @@
-# cic.go
-
-## Compound Interest Calculator
+![Compound Interest Calculator Logo](https://raw.githubusercontent.com/juba666/cic/master/repository-open-graph-template.png)
+# Compound Interest Calculator
 Compound interest is one of the most powerful forces in investing. Simple interest simply means a set percentage of the principal for the period, and is rarely used in practice. On the other hand, compound interest is applied to both loans, investments and deposit accounts.
 
 - Calculate future amount for loan or investment
@@ -27,7 +26,7 @@ Compound interest is one of the most powerful forces in investing. Simple intere
 
       e = (1+((r/100)/n)) ^ n − 1
 
-### 1. Future Amount Calculator
+## 1. Future Amount Calculator
 ```
 f = p × ((r/100)+1) ^ n
 
@@ -37,7 +36,7 @@ r = Interest Rate (%)
 n = Number of Periods
 s = Type of Period (days-weeks-months-years)
 ```
-#### An example
+### An example
 ```
 If the £1000 loan was for a period of 6 months at 10% interest rate, what is the future amount?:
 
@@ -51,7 +50,7 @@ r = 10% (10/100 for decimal)
 n = 6
 s = months
 ```
-### 2. Principal Amount Calculator
+## 2. Principal Amount Calculator
 ```
 p = f / ((r/100)+1) ^ n
 
@@ -61,7 +60,7 @@ r = Interest Rate (%)
 n = Number of Periods
 s = Type of Period (days-weeks-months-years)
 ```
-#### An example
+### An example
 ```
 What principal amount do you need to invest, to get £2000 in 5 years at 10% interest rate?:
 
@@ -75,7 +74,7 @@ r = 10% (10/100 for decimal)
 n = 5
 s = years
 ```
-### 3. Interest Rate Calculator
+## 3. Interest Rate Calculator
 ```
 r = (f/p) ^ 1/n - 1
 
@@ -85,7 +84,7 @@ r = Interest Rate (%)(x100 for percentage)
 n = Number of Periods
 s = Type of Period (days-weeks-months-years)
 ```
-#### An example
+### An example
 ```
 You have £1,000, and want it to grow to £2,000 in 5 Years, what interest rate do you need?
 
@@ -99,7 +98,7 @@ r = 14.87%
 n = 5
 s = years
 ```
-### 4. Number of Periods Calculator
+## 4. Number of Periods Calculator
 ```
 (note: it uses the natural logarithm function ln)
 
@@ -111,7 +110,7 @@ r = Interest Rate (%)
 n = Number of Periods
 s = Type of Period (days-weeks-months-years)
 ```
-#### An example
+### An example
 ```
 How many years will it take to turn £1,000 into £2,000 at 10% interest rate?
 
@@ -125,7 +124,7 @@ r = 10% (10/100 for decimal)
 n = 7.27
 s = years
 ```
-### 5. Periodic Compounding Future Amount Calculator
+## 5. Periodic Compounding Future Amount Calculator
 ```
 f = p × (((r/100)/n)+1) ^ n
 
@@ -135,7 +134,7 @@ r = Interest Rate (%)
 n = Number of Periods within the year (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
 49669676277240766303535475945713821785251664274)
 ```
-#### An example
+### An example
 ```
 If £1000 was invested at 10% interest rate, "Compounded Semiannually"; what is the future amount?:
 
@@ -148,7 +147,7 @@ p = £1000
 r = 10% (10/100 for decimal)
 n = 2 
 ```
-### 6. Effective Annual Interest Rate Calculator
+## 6. Effective Annual Interest Rate Calculator
 ```
 e = (1+((r/100)/n)) ^ n − 1
 
@@ -157,7 +156,7 @@ r = Nominal Interest Rate (%)
 n = Number of Periods within the year (Semiannually=2,Quarterly=4,Monthly=12,Daily=365,Continuously=2.71828182845904523536028747135266249775724709369995957
 49669676277240766303535475945713821785251664274)
 ```
-#### An example
+### An example
 ```
 What effective annual interest rate do you get when the ad says "6% compounded monthly"?
 
