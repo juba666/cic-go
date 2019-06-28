@@ -345,8 +345,41 @@ main()
 }
 }
 func calcVP() {
+var v float64
+var n float64
+var r float64
+vp:
+fmt.Print("Enter a Present Value of Annuity: ") 
+fmt.Scanf("%f\n", &v)
+if !(v > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero")
+		goto vp
+} else {
+goto np}
+np:
+fmt.Print("Enter a Number of Periods: ") 
+fmt.Scanf("%f\n", &n)
+if !(n > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero")
+		goto np
+} else {
+goto ir}
+ir:
+fmt.Print("Enter a Interest Rate per Period(%): ")
+fmt.Scanf("%f\n", &r)
+if !(r > 0) {
+        fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
+		goto ir
+} else {
 //Calculate value of each payment for annuity 
 //p = v × r / (1 − (1+r) ^ −n)
+tr := (r/100)+1
+tn := n*-1
+tp := math.Pow(float64(tr), float64(tn))
+p := ((r/100)/(1-tp))*v
+P := fmt.Sprintf("%.2f", p) 
+fmt.Println("Value of Each Payment for Annuity:£",P)
 counter++
 main()
+}
 }
