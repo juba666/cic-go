@@ -1,6 +1,7 @@
 package main
 import(
 "fmt"
+"strings"
 "math"
 "os"
 )
@@ -90,7 +91,8 @@ var r float64
 pa:
 fmt.Print("Enter a Principal Amount(£): ")
 fmt.Scanf("%f\n", &p)
-if !(p > 0) {
+sp := fmt.Sprintf("%f", p)
+if !(p > 0) || ((strings.ContainsRune(sp, '\u00a3')) || ((strings.ContainsRune(sp, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto pa
 } else {
@@ -107,7 +109,8 @@ goto ir}
 ir:
 fmt.Print("Enter a Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
-if !(r > 0) {
+sr := fmt.Sprintf("%f", r)
+if !(r > 0) || ((strings.ContainsRune(sr, '\u00a3')) || ((strings.ContainsRune(sr, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
@@ -128,7 +131,8 @@ var r float64
 fa:
 fmt.Print("Enter a Future Amount(£): ")
 fmt.Scanf("%f\n", &f)
-if !(f > 0) {
+sf := fmt.Sprintf("%f", f)
+if !(f > 0) || ((strings.ContainsRune(sf, '\u00a3')) || ((strings.ContainsRune(sf, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto fa
 } else {
@@ -145,7 +149,8 @@ goto ir}
 ir:
 fmt.Print("Enter a Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
-if !(r > 0) {
+sr := fmt.Sprintf("%f", r)
+if !(r > 0) || ((strings.ContainsRune(sr, '\u00a3')) || ((strings.ContainsRune(sr, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
@@ -167,7 +172,8 @@ var p float64
 pa:
 fmt.Print("Enter a Principal Amount(£): ")
 fmt.Scanf("%f\n", &p)
-if !(p > 0) {
+sp := fmt.Sprintf("%f", p)
+if !(p > 0) || ((strings.ContainsRune(sp, '\u00a3')) || ((strings.ContainsRune(sp, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto pa
 } else {
@@ -175,7 +181,8 @@ goto fa}
 fa:
 fmt.Print("Enter a Future Amount(£): ")
 fmt.Scanf("%f\n", &f)
-if !(f > 0) {
+sf := fmt.Sprintf("%f", f)
+if !(f > 0) || ((strings.ContainsRune(sf, '\u00a3')) || ((strings.ContainsRune(sf, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto fa
 } else {
@@ -207,7 +214,8 @@ var p float64
 pa:
 fmt.Print("Enter a Principal Amount(£): ")
 fmt.Scanf("%f\n", &p)
-if !(p > 0) {
+sp := fmt.Sprintf("%f", p)
+if !(p > 0) || ((strings.ContainsRune(sp, '\u00a3')) || ((strings.ContainsRune(sp, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto pa
 } else {
@@ -215,7 +223,8 @@ goto fa}
 fa:
 fmt.Print("Enter a Future Amount(£): ")
 fmt.Scanf("%f\n", &f)
-if !(f > 0) {
+sf := fmt.Sprintf("%f", f)
+if !(f > 0) || ((strings.ContainsRune(sf, '\u00a3')) || ((strings.ContainsRune(sf, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto fa
 } else {
@@ -224,7 +233,8 @@ fmt.Scanf("%s\n", &s)}
 ir:
 fmt.Print("Enter a Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
-if !(r > 0) {
+sr := fmt.Sprintf("%f", r)
+if !(r > 0) || ((strings.ContainsRune(sr, '\u00a3')) || ((strings.ContainsRune(sr, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
@@ -246,7 +256,8 @@ var r float64
 pa:
 fmt.Print("Enter a Principal Amount(£): ")
 fmt.Scanf("%f\n", &p)
-if !(p > 0) {
+sp := fmt.Sprintf("%f", p)
+if !(p > 0) || ((strings.ContainsRune(sp, '\u00a3')) || ((strings.ContainsRune(sp, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto pa
 } else {
@@ -262,7 +273,8 @@ goto ir}
 ir:
 fmt.Print("Enter a Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
-if !(r > 0) {
+sr := fmt.Sprintf("%f", r)
+if !(r > 0) || ((strings.ContainsRune(sr, '\u00a3')) || ((strings.ContainsRune(sr, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
@@ -290,7 +302,8 @@ goto ir}
 ir:
 fmt.Print("Enter a Nominal Interest Rate(%): ")
 fmt.Scanf("%f\n", &r)
-if !(r > 0) {
+sr := fmt.Sprintf("%f", r)
+if !(r > 0) || ((strings.ContainsRune(sr, '\u00a3')) || ((strings.ContainsRune(sr, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
@@ -310,9 +323,10 @@ var p float64
 var n float64
 var r float64
 pv:
-fmt.Print("Enter a Value of Each Payment for Annuity: ") 
+fmt.Print("Enter a Value of Each Payment for Annuity(£): ") 
 fmt.Scanf("%f\n", &p)
-if !(p > 0) {
+sp := fmt.Sprintf("%f", p)
+if !(p > 0) || ((strings.ContainsRune(sp, '\u00a3')) || ((strings.ContainsRune(sp, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero")
 		goto pv
 } else {
@@ -328,7 +342,8 @@ goto ir}
 ir:
 fmt.Print("Enter a Interest Rate per Period(%): ")
 fmt.Scanf("%f\n", &r)
-if !(r > 0) {
+sr := fmt.Sprintf("%f", r)
+if !(r > 0) || ((strings.ContainsRune(sr, '\u00a3')) || ((strings.ContainsRune(sr, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
@@ -349,9 +364,10 @@ var v float64
 var n float64
 var r float64
 vp:
-fmt.Print("Enter a Present Value of Annuity: ") 
+fmt.Print("Enter a Present Value of Annuity(£): ") 
 fmt.Scanf("%f\n", &v)
-if !(v > 0) {
+sv := fmt.Sprintf("%f", v)
+if !(v > 0) || ((strings.ContainsRune(sv, '\u00a3')) || ((strings.ContainsRune(sv, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero")
 		goto vp
 } else {
@@ -367,7 +383,8 @@ goto ir}
 ir:
 fmt.Print("Enter a Interest Rate per Period(%): ")
 fmt.Scanf("%f\n", &r)
-if !(r > 0) {
+sr := fmt.Sprintf("%f", r)
+if !(r > 0) || ((strings.ContainsRune(sr, '\u00a3')) || ((strings.ContainsRune(sr, '$')))) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
