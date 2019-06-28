@@ -180,10 +180,10 @@ n = 12
 ```
 v = p × (1 − (1+r) ^ −n) / r
 
-v = Present Value of Annuity 
-p = Value of Each Payment for Annuity
+v = Present Value of Annuity (£)
+p = Value of Each Payment for Annuity (£)
 n = Number of Periods
-r = Interest Rate per Period
+r = Interest Rate per Period (%)
 ```
 ### An example
 ```
@@ -202,10 +202,10 @@ r = 1% (1/100 for decimal)
 ```
 p = v × r / (1 − (1+r) ^ −n)
 
-p = Value of Each Payment for Annuity
-v = Present Value of Annuity 
+p = Value of Each Payment for Annuity (£)
+v = Present Value of Annuity (£)
 n = Number of Periods
-r = Interest Rate per Period
+r = Interest Rate per Period (%)
 ```
 ### An example
 ```
