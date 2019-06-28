@@ -111,6 +111,8 @@ if !(r > 0) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
+//Calculate future amount for loan or investment
+//f = p × ((r/100)+1) ^ n
 f := math.Pow(float64(r)/100+1, float64(n))*p
 F := fmt.Sprintf("%.2f", f)
 fmt.Println("Future Amount:£",F)
@@ -147,6 +149,8 @@ if !(r > 0) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
+//Calculate principal amount for loan or investment
+//p = f / ((r/100)+1) ^ n
 p := math.Pow(float64(r)/100+1, float64(n)) 
 fp := f/p
 P := fmt.Sprintf("%.2f", fp) 
@@ -184,6 +188,8 @@ if !(n > 0) {
         fmt.Println("ERROR: you did not enter a number greater than zero")
 		goto np
 } else {
+//Calculate interest rate for loan or investment
+//r = (f/p) ^ 1/n - 1
 fp := f/p
 nd := 1/n
 r := (math.Pow(float64(fp), float64(nd))-1)*100
@@ -222,6 +228,8 @@ if !(r > 0) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
+//Calculate number of periods for loan or investment
+//n = ln(f/p) / ln(1+r)
 fp := f/p
 rd := (r/100)+1
 n := math.Log(fp)/math.Log(rd)
@@ -258,6 +266,8 @@ if !(r > 0) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
+//Calculate periodic compounding future amount for loan or investment
+//f = p × (((r/100)/n)+1) ^ n
 rn := (r/100)/n
 f := math.Pow(float64(rn)+1, float64(n))*p
 F := fmt.Sprintf("%.2f", f) 
@@ -284,6 +294,8 @@ if !(r > 0) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
+//Calculate effective annual interest rate for loan or investment
+//e = (1+((r/100)/n)) ^ n − 1
 rn := (r/100)/n
 R := math.Pow(float64(rn)+1, float64(n))-1
 e := R*100
@@ -320,6 +332,8 @@ if !(r > 0) {
         fmt.Println("ERROR: you did not enter a number greater than zero, or included a symbol")
 		goto ir
 } else {
+//Calculate present value of annuity
+//v = p × (1 − (1+r) ^ −n) / r
 tr := (r/100)+1
 tn := n*-1
 tv := math.Pow(float64(tr), float64(tn))
@@ -331,6 +345,8 @@ main()
 }
 }
 func calcVP() {
+//Calculate value of each payment for annuity 
+//p = v × r / (1 − (1+r) ^ −n)
 counter++
 main()
 }
