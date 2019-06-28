@@ -55,10 +55,10 @@ if CH == FA {
 	fmt.Println("You have chosen Effective Annual Interest Rate Calculator")
 		calcEAIR()
 } else if CH == PV {
-	fmt.Println("You have chosen Effective Annual Interest Rate Calculator")
+	fmt.Println("You have chosen Present Value of Annuity Calculator")
 		calcPV()
 } else if CH == VP {
-	fmt.Println("You have chosen Effective Annual Interest Rate Calculator")
+	fmt.Println("You have chosen Value of Each Payment for Annuity Calculator")
 		calcVP()
 } else if CH == EX {
 	fmt.Println("Thank You for using cic!")
